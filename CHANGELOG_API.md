@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.1](https://github.com/getCompass/userbot/releases/tag/v1.0.1)
+## [Api V2](https://github.com/getCompass/userbot/releases/tag/v1.0.1)
 
 - Добавлена новая версия Userbot API (версия 2).
 - Реализован новый способ авторизации запросов к Userbot API.
