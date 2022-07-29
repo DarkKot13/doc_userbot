@@ -1,6 +1,6 @@
 # Changelog
 
-## [Api V2](https://github.com/getCompass/userbot/releases/tag/v1.0.1)
+## [Api V2](https://github.com/getCompass/userbot/releases/tag/v1)
 
 - Добавлена новая версия Userbot API (версия 2).
 - Реализован новый способ авторизации запросов к Userbot API.
@@ -8,6 +8,6 @@
 - На URL-адрес установленного webhook параметр user_id также передаётся в формате int-значения.
 - Добавлены новые API-методы: [webhook/setVersion](https://github.com/getCompass/userbot#post-webhooksetversion) и [webhook/getVersion](https://github.com/getCompass/userbot#post-webhookgetversion).
 
-## [Userbot release](https://github.com/getCompass/userbot/releases/tag/v1.0.0)
+## [Userbot release](https://github.com/getCompass/userbot/releases/tag/master)
 
 - Реализованы чат-боты Compass.
