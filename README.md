@@ -337,7 +337,7 @@ https://userbot.getcompass.com/api/v3/user/send
 >```json5 
 >{
 >	"answer": {
->		"action": "/message/send",
+>		"action": "message_send",
 >		"post": {
 >			"text": "Привет, это сообщение от бота",
 >			"type": "text"
@@ -350,7 +350,7 @@ https://userbot.getcompass.com/api/v3/user/send
 
 #### Доступные действия для ответа с webhook
 
-#### `/message/send`
+#### `message_send`
 
 Действие для отправки сообщения от бота на команду пользователя.
 
@@ -371,7 +371,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ```json5 
 {
 	"answer": {
-		"action": "/message/send",
+		"action": "message_send",
 		"post": {
 			"text": "Привет, это сообщение от бота",
 			"type": "text"
@@ -384,7 +384,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ```json5 
 {
 	"answer": {
-		"action": "/message/send",
+		"action": "message_send",
 		"post": {
   		    "file_id": "+OVV/dHD03Pb/qRQz9W/FhgupqO6UY0lmbwnG5tz9mHW51N8gA10VvotOzq01GuWq/c5LGZSldSCz4aki...",
 		    "type": "file"
@@ -397,7 +397,7 @@ https://userbot.getcompass.com/api/v3/user/send
 
 ---
 
-#### `/thread/send`
+#### `thread_send`
 
 Действие для отправки сообщения от бота в тред на команду пользователя.
 
@@ -418,7 +418,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ```json5 
 {
 	"answer": {
-		"action": "/thread/send",
+		"action": "thread_send",
 		"post": {
 		    "text": "Привет, это сообщение от бота в тред",
 		    "type": "text"
@@ -431,7 +431,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ```json5 
 {
 	"answer": {
-		"action": "/thread/send",
+		"action": "thread_send",
 		"post": {
   		    "file_id": "+OVV/dHD03Pb/qRQz9W/FhgupqO6UY0lmbwnG5tz9mHW51N8gA10VvotOzq01GuWq/c5LGZSldSCz4aki...",
 		    "type": "file"
@@ -444,7 +444,7 @@ https://userbot.getcompass.com/api/v3/user/send
 
 ---
 
-#### `/message/addReaction`
+#### `message_addReaction`
 
 Действие для установки реакции на команду пользователя.
 
@@ -463,7 +463,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ```json5 
 {
 	"answer": {
-		"action": "/message/addReaction",
+		"action": "message_addReaction",
 		"post": {
   		    "reaction": ":black_cat:"
 		}
