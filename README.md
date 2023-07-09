@@ -62,7 +62,7 @@ Webhook — это URL-адрес вашего сервиса. После его
 | --- |
 
 #### Учётные данные бота
-После создания бота в разделе «Карточка бота» вам будут предоставлен **Токен** нового бота (видны администраторам с правами управления ботами).
+После создания бота в разделе «Карточка бота» вам будут предоставлен **Токен** нового бота (виден администраторам с правами управления ботами).
 
 **Токен бота (token)** — уникальный для каждого бота идентификатор.
 
@@ -301,7 +301,7 @@ https://userbot.getcompass.com/api/v3/user/send
 >	}
 >}
 >```
-- answer - хранит json-объект переданных параметров;
+- answer - в него передаёте json-объект переданных параметров;
 - action - действие, которое желаете выполнить в ответе;
 - post - объект с post-параметрами.
 
@@ -455,6 +455,47 @@ webhook, к примеру, появился новый тип чата:
 данные известного вам формата.
 
 После того как с вашей стороны будут учтены новые изменения, вы можете с помощью метода [/webhook/setVersion](#post-webhooksetversion) переключить версию webhook на актуальный.
+
+#### История изменений для версии webhook бота
+
+#### Webhook version 1
+
+Для этой версии webhook актуальны следующие изменения: 
+- параметр user_id в передаваемых на ваш webhook данных имеет формат: user_id = "User-12345". 
+
+> Пример:
+>
+>```json5 
+>{
+>    "group_id": "3brLYUVlCEbNg6A0m6W2X2zkPyY8PN3Ijw6efI20gVJHGiy4xHOociXAmMh1o/i01gLTS8wHHx7JGrrzIL4z...",
+>    "message_id": "oDT9FLRWjDOX0+4smgkCn039jKIce+NUE90zy9neDKvh6ubLMDGU/Cee5e07avTPFT/WcnAJIXFxBYmT8vqbF5vNIi4T/YEKZh...",
+>    "text": "/покажи список команд"
+>    "type": "group",
+>    "user_id": "User-12345",
+>}
+>```
+
+#### Webhook version 2
+
+В этом версии изменился формат параметра user_id в передаваемых на ваш webhook данных:<br> 
+параметр user_id представлен int-значением: user_id = 12345.
+
+> Пример:
+>
+>```json5 
+>{
+>    "group_id": "3brLYUVlCEbNg6A0m6W2X2zkPyY8PN3Ijw6efI20gVJHGiy4xHOociXAmMh1o/i01gLTS8wHHx7JGrrzIL4z...",
+>    "message_id": "oDT9FLRWjDOX0+4smgkCn039jKIce+NUE90zy9neDKvh6ubLMDGU/Cee5e07avTPFT/WcnAJIXFxBYmT8vqbF5vNIi4T/YEKZh...",
+>    "text": "/покажи список команд"
+>    "type": "group",
+>    "user_id": 12345,
+>}
+>```
+
+#### Webhook version 3
+
+В этой версии отправляемый на ваш webhook запрос будет подписан одним header-заголовком с использованием токена того бота, которому принадлежит отправленная команда:<br>
+>заголовок "**Authorization: bearer={токен бота}**".<br>
 
 ## Список методов Compass Userbot API
 
@@ -966,7 +1007,7 @@ URL для запроса: `https://userbot.getcompass.com/api/v3/webhook/setVer
 
 Данные для тела запроса:
 ```json5 
-{"version": 2}
+{"version": 3}
 ```
 
 Результат выполнения запроса:
