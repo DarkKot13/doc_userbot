@@ -209,7 +209,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ## Webhook и реагирование на команды
 
 Бот может реагировать на специальные команды-сообщения.<br>
-Такие команды может добавить участник пространства с правами управления ботами с помощью метода [/command/update](#post-commandupdate):
+Для добавления команд используется метод [/command/update](#post-commandupdate):
 
 | <img src="./screenshots/ru/12.png" alt="" width="550" /> |
 | --- |
