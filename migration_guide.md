@@ -4,7 +4,7 @@
 
 Руководство по миграции с версии V2 до версии V3 Userbot API.<br>
 Добавлены следующие изменения:
-- Добавлена новая версия Userbot API (версия 3).
+- Добавлена новая версия Userbot API и webhook (версия 3).
 - Все запросы в Userbot API выполняются синхронно и сразу возвращают результат своего выполнения.
 - Удалён API-метод /request/get.
 - Изменён способ авторизации запросов к Userbot API - header-заголовок Signature удалён из проекта. Теперь для авторизации запроса необходимо передавать только header-заголовок Authorization.
@@ -13,24 +13,26 @@
 - Добавилась возможность синхронного ответа на запрос, пришедший на ваш webhook. 
 
 Инструкция для миграции:
-1) Поправьте все запросы к Userbot API, указав в URL запроса новую версию API.<br>
+1) Поправьте все запросы к Userbot API, указав в URL запроса новую версию API (версия 3).<br>
 Было: <br>
-`https://userbot.getcompass.com/api/ v2 /user/send` <br>
+`https://userbot.getcompass.com/api/v2/user/send` <br>
 Стало: <br>
-`https://userbot.getcompass.com/api/ v3 /user/send` <br>
+`https://userbot.getcompass.com/api/v3/user/send` <br>
 
-2) Удалите использование метода /request/get.
+2) С помощью метода [webhook/setVersion](https://github.com/getCompass/userbot#post-webhooksetversion) установите новую версию (версия 3) webhook для своего бота.
 
-3) Все методы из [Списка методов Compass Userbot API](https://github.com/getCompass/userbot#Compass-Userbot-API-method-list) теперь сразу возвращают результат своего выполнения.<br>
+3) Удалите использование метода /request/get.
+
+4) Все методы из [Списка методов Compass Userbot API](https://github.com/getCompass/userbot#Compass-Userbot-API-method-list) теперь сразу возвращают результат своего выполнения.<br>
 Замените получение request_id для методов на тот ответ, который ожидается в случае успешного выполнения запроса.
 
-4) Удалите передачу заголовка Signature для запросов к V3 Userbot API.<br>
+5) Удалите передачу заголовка Signature для запросов к V3 Userbot API.<br>
 Теперь для валидации запроса необходимо передавать один header-заголовок:
 - заголовок **"Authorization: bearer=<токен бота>"** - содержит токен вашего бота. 
 
-5) Удалите для V3 Userbot API обработку системной ошибки, которая имеет error_code = 4.
+6) Удалите для V3 Userbot API обработку системной ошибки, которая имеет error_code = 4.
 
-6) В проекте, где вами обрабатывается запрос, пришедший на ваш webhook, добавьте передачу ответа согласно инструкции [Ответ на команду пользователя](https://github.com/getCompass/userbot#Ответ-на-команду-пользователя)
+7) В проекте, где вами обрабатывается запрос, пришедший на ваш webhook, добавьте передачу ответа согласно инструкции [Ответ на команду пользователя](https://github.com/getCompass/userbot#Ответ-на-команду-пользователя)
 
 ---
 
@@ -47,9 +49,9 @@
 Инструкция для миграции:
 1) Поправьте все запросы к Userbot API, указав в URL запроса новую версию API.<br>
 Было: <br>
-`https://userbot.getcompass.com/api/ v1 /user/send` <br>
+`https://userbot.getcompass.com/api/v1/user/send` <br>
 Стало: <br>
-`https://userbot.getcompass.com/api/ v2 /user/send` <br>
+`https://userbot.getcompass.com/api/v2/user/send` <br>
    
 2) Запросы к V2 Userbot API должны иметь header-заголовки:
 - заголовок **"Authorization: bearer=<токен бота>"** - содержит токен вашего бота;
