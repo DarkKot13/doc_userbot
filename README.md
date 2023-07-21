@@ -84,10 +84,10 @@ All requests must be set with content type **application/json**.<br>
 To upload files **multipart/form-data**.
 
 The body of each request to Compass must contain the following:
-- **json string** of required parameters for the request (empty if no data is required).
+- **json string** of required parameters for the request (empty if no data is required)
 
 Request authorization is done via **headers** using your bot's token:<br>
-- header "**Authorization: bearer={bot token}**" - the header contains a token that belongs to your bot (the bot must be enabled for this);
+- header "**Authorization: bearer={bot token}**" - the header contains a token that belongs to your bot (the bot must be enabled for this)
 
 All methods are case sensitive and must be UTF-8 encoded.
 
@@ -129,12 +129,12 @@ When sending a request, you need to specify where the message from the bot will 
 
 The member ID (the "user_id" parameter in requests) is used when sending a message to a specific member. You may get it from a member's profile in Compass (ID is available for users with bot managing permission only):
 
-| <img src="./screenshots/en/en8.png" />  |
+| <img src="./screenshots/en/en8.png" alt="" width="400" />  |
 |------------------------------------------|
 
 #### Chat Key
 
-It is a unique identifier of the group which the bot is a member of (used as "group_id" in requests)..<br>
+It is a unique identifier of the group which the bot is a member of (used as "group_id" in requests).<br>
 It is available to members with permission to manage bots in the section "Bot menu" in the group chat:
 
 | <img src="./screenshots/en/en9.png" alt="" width="550" />  |
@@ -155,9 +155,9 @@ It is the identifier of a message (used as "message_id" in requests) that the bo
 
 All requests to Compass are executed synchronously and return the result of their execution.<br>
 The response is a json object that contains the fields:
-- **status** (string) — shows the status of the request.<br>
-  Can take a value of "ok" (in case of success) or "error" (in case of an error);
-- **response** (json) is a json object of arbitrary data.
+- **status** (string) — shows the status of the request<br>
+  Can take a value of "ok" (in case of success) or "error" (in case of an error)
+- **response** (json) is a json object of arbitrary data
 
 In case of success, the response field may have the data of the executed request, or an empty value.
 
@@ -186,9 +186,9 @@ Let's look at the scheme of getting the result by the example of sending a messa
 
 If an error occurs the field **status** acquires the "error" value.
 
-In this case, the **response** field will contain the fields::
-- **error_code** (int) — error code. For more details, see the section [Errors in executing the Compass Userbot API request](#Errors-when-executing-the-Compass-Userbot-API-request);
-- **message** (string) — arbitrary error text.
+In this case, the **response** field will contain the fields:
+- **error_code** (int) — error code. For more details, see the section [Errors in executing the Compass Userbot API request](#Errors-when-executing-the-Compass-Userbot-API-request)
+- **message** (string) — arbitrary error text
 
 **Example of an error response:**
 ```json5 
@@ -252,7 +252,7 @@ The request will be signed with a header using the token of the bot to which the
 
 After receiving the data on your webhook, you can:
 - check by the token in the transmitted header that the request came for your bot
-- synchronously respond to the user's command by sending a message to the chat or by adding a reaction to the command message.
+- synchronously respond to the user's command by sending a message to the chat or by adding a reaction to the command message
 
 #### Response to the user's command
 
@@ -260,10 +260,10 @@ After receiving a message to your webhook, you can respond to the user's command
 The response to the request from the bot must be generated as a **json string** with the required parameters.
 
 Let's look at the example of sending a response to a user's command:
-- the user sends a command for your bot to the chat;
-- a request with the command data is sent to your webhook;
-- after receiving the data, you have to form the required parameters and return them in the **request response**;
-- having successfully completed the webhook request, the bot receives your response and responds to the user's command.
+- the user sends a command for your bot to the chat
+- a request with the command data is sent to your webhook
+- after receiving the data, you have to form the required parameters and return them in the **request response**
+- having successfully completed the webhook request, the bot receives your response and responds to the user's command
 
 > Example of parameters for responding to a user's command to be sent as a message in a chat:
 >
@@ -278,9 +278,9 @@ Let's look at the example of sending a response to a user's command:
 >	}
 >}
 >```
-- answer is a field that contains a json object of the transmitted parameters;
-- action is the action you want to perform in the response;
-- post is an object with post parameters.
+- answer is a field that contains a json object of the transmitted parameters
+- action is the action you want to perform in the response
+- post is an object with post parameters
 
 If you do not need to respond to the sent command, it is also not necessary to transmit data in the request response.
 
@@ -808,7 +808,7 @@ A few rules for setting commands:
 
 - The length of the command must not exceed 80 characters.
 - The command can have parameters enclosed in square brackets. In this case, the pattern for defining commands for the bot will "ignore" them during processing, treating them as a sent parameter. <br> For example, a bot command list includes the command: "send the message to the member [ID]". If the message "/send message to member [1666]" is sent to the chat, the parser will define it as a command. 
-- Commands can contain Cyrillic and Latin alphabet symbols, numbers and an underscore. For example, 
+- Commands can contain Cyrillic and Latin alphabet symbols, numbers and an underscore. For example,
 
 > /help
 >
