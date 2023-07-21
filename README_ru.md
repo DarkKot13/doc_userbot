@@ -460,8 +460,7 @@ https://userbot.getcompass.com/api/v3/user/send
 
 ### `POST /user/send`
 
-Метод для отправки сообщения от бота пользователю.
-
+Метод для отправки сообщения от бота пользователю.<br>
 URL для запроса: `https://userbot.getcompass.com/api/v3/user/send`
 
 В теле запроса должны быть указаны следующие параметры:
