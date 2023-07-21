@@ -612,7 +612,7 @@ The following parameters must be specified in the request body:
 | message_id | string | required | Identifier of the message which bot's reaction is added to. |
 | reaction | string | required | A reaction to be added.<br>May take the value:<br>- short_name. For example, `:blush:`<br>- emoji. For example, 😊 |
 
-The result will be a standard "ok" response with no data inside.
+The result will be a default "ok" response with no data inside.
 
 <details><summary>Data example for the request body and the executing result</summary>
 <br>
