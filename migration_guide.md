@@ -25,7 +25,7 @@ Replace getting the request_id for the methods with the response that is expecte
 
 4) Remove the Signature header transmission for requests to the V3 Userbot API.<br>
 Now, to validate the request, you need to pass one header:<br>
-the header **"Authorization: bearer=<bot-token>"** contains your bot's token. 
+the header **"Authorization: bearer=< bot token >"** contains your bot's token. 
 
 5) Remove the system error handling for the V3 Userbot API, which has error_code = 4.
 
