@@ -54,8 +54,8 @@
 `https://userbot.getcompass.com/api/v2/user/send` <br>
    
 2) Запросы к V2 Userbot API должны иметь header-заголовки:
-- заголовок **"Authorization: bearer=<токен бота>"** содержит токен вашего бота;
-- заголовок **"Signature: signature=<подпись запроса>"** - подпись для валидации данных запроса.
+    - заголовок **"Authorization: bearer=<токен бота>"** содержит токен вашего бота;
+    - заголовок **"Signature: signature=<подпись запроса>"** - подпись для валидации данных запроса.
 
 3) В методах [user/send](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-usersend), [user/getList](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-usergetlist) параметр `user_id` имеет формат int-значения.<br>
 Префикс "User-" был удалён.<br>
@@ -81,8 +81,8 @@
 >```
 
 5) Для возможности смены версии webhook вашего бота используйте новые методы Userbot API:
-- [webhook/setVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhooksetversion)
-- [webhook/getVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhookgetversion)
+    - [webhook/setVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhooksetversion)
+    - [webhook/getVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhookgetversion)
 
 ---
 
