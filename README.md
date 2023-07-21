@@ -1035,7 +1035,7 @@ For this purpose, the text of the message must be in the following format:<br>
 `["@"|<numeric identifier user_id>|"<member name>"|]`
 
 With the example above, let's take that Fred Lambert has a member ID 345. To get the message like in the example, the message test sent by the bot must be of the following format:<br>
-`["@"|345|Fred Lambert] data generated ✅`
+`["@"|345|"Fred Lambert"] data generated ✅`
 
 ---
 
