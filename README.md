@@ -696,7 +696,7 @@ List of possible errors:
 
 ### `POST /user/getList`
 
-The method for getting data about the groups the bot is member of.<br>
+The method for getting data about the team members of.<br>
 URL for the request: `https://userbot.getcompass.com/api/v3/user/getList`
 
 The following parameters can be used in the request body:
