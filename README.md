@@ -660,7 +660,7 @@ The following parameters must be specified in the request body:
 | message_id | string | required | Identifier of the message which the bot's reaction will be removed from. |
 | reaction | string | required | The reaction to be removed.<br>May take the value:<br>- short_name. For example, `:blush:`<br>- emoji. For example, 😊  |
 
-The result will be a standard "ok" response with no data inside.
+The result will be a default "ok" response with no data inside.
 
 <details><summary>Data example for the request body and the executing result</summary>
 <br>
@@ -818,7 +818,7 @@ A few rules for setting commands:
 >
 > /set_timer 10min
 
-The result will be a standard "ok" response with no data inside.
+The result will be a default "ok" response with no data inside.
 
 <details><summary>Data example for the request body and the executing result</summary>
 <br>
@@ -892,7 +892,7 @@ The following parameters must be specified in the request body:
 | -------- | --- | --- | -------- |
 | version | int | required | The version number for the bot webhook. |
 
-The result will be a standard "ok" response with no data inside.
+The result will be a default "ok" response with no data inside.
 
 <details><summary>Data example for the request body and the execution result</summary>
 <br>
