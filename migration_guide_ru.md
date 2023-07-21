@@ -73,7 +73,7 @@
 >```json5 
 >{
 >     "group_id": "",
->     "message_id": "oDT9FLRWjDOX0+4smgkCn039jKIce+NUE90zy9neDKvh6ubLMDGU/Cee5e07avTPFT/WcnAJIXFxBYmT8vqbF5vNIi4T/YEKZh...",
+>     "message_id": "oDT9FLRWjDOX0+4smgkCn039jKIce+NUE90zy9neDKvh6ubLMDGU/Cee5e07avTPFT/WcnAJIX...",
 >     "text": "/покажи список команд"
 >     "type": "single",
 >     "user_id": 12345,
