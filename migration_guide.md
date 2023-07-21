@@ -54,8 +54,8 @@ After: <br>
 `https://userbot.getcompass.com/api/v2/user/send` <br>
    
 2) Requests to the V2 Userbot API must have headers:
-    - the header **"Authorization: bearer=<bot-token>>"** contains your bot token
-    - the header **"Signature: signature=<signature-request>"** is a signature for validating the request data
+    - the header **"Authorization: bearer=< bot token >"** contains your bot token
+    - the header **"Signature: signature=< signature request >"** is a signature for validating the request data
 
 3) In [user/send](https://github.com/getCompass/userbot#post-usersend), [user/getList](https://github.com/getCompass/userbot#post-usergetlist) methods, the `user_id` parameter has the int-value format.<br>
 The prefix "User-" has been removed.<br>
