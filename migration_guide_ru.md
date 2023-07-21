@@ -34,7 +34,6 @@
 
 2) В вашем проекте, где обрабатывается запрос, пришедший на ваш webhook, удалите обработку заголовка Signature.
 
----
 
 ## [V2](https://github.com/getCompass/userbot/releases/tag/v2)
 
@@ -84,7 +83,6 @@
     - [webhook/setVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhooksetversion)
     - [webhook/getVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhookgetversion)
 
----
 
 ## [Userbot release](https://github.com/getCompass/userbot/releases/tag/v1)
 
