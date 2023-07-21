@@ -7,7 +7,7 @@
 - [Sending a request to Compass](#Sending-a-request-to-Compass)
   - [Response from Compass after sending a request](#Response-from-Compass-after-sending-a-request)
 - [Webhook and responding to commands](#Webhook-and-responding-to-commands)
-  - [Response to the user's command](#Response-to-the-user's-command)
+  - [Response to the user's command](#Response-to-the-users-command)
   - [Actions available for responding with a webhook](#Actions-available-for-responding-with-a-webhook)
   - [Bot Webhook version](#Bot-Webhook-version)
 - [Compass Userbot API method list](#Compass-Userbot-API-method-list)
