@@ -744,7 +744,7 @@ user_list (array) — список с информацией по участни
                },
                {
                     "user_id": 2,
-                    "user_name": "Михаилов Михаил",
+                    "user_name": "Михайлов Михаил",
                     "avatar_file_url": "https://file-1.getcompass.com/files/pivot/dca/e8d/632/fa7/51f/fdcaee3ecea91e6c_w400.jpeg"
                }
           ]
