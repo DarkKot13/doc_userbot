@@ -419,8 +419,10 @@ The Compass app supports a list of reactions of version 15.0: https://emojipedia
 
 #### Bot Webhook version
 
-Each Compass bot has a webhook version that allows for more flexible interaction with the Userbot API when API changes.<br>
+Each Compass bot has a webhook version that allows for more flexible interaction with the Userbot API when API changes.
+
 When new changes appear, the bot you used before the changes will have the version that the new changes will not affect. And the data of the format known to you will be sent to the address of your webhook.<br>
+
 To get new changes, you need to use the [/webhook/setVersion](#post-webhooksetversion) method to switch the webhook version to the current one.<br>
 Learn more about migration changes and webhook version: [Migration guide](https://github.com/getCompass/userbot/blob/master/migration_guide.md)
 
