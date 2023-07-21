@@ -44,7 +44,7 @@
 - Изменён способ авторизации запросов к Userbot API - теперь для авторизации запросов используются header-заголовки.
 - Изменён формат параметра user_id: ранее используемый как "User-{ID}", теперь он принимает int-значение.
 - На URL-адрес установленного webhook параметр user_id также передаётся в формате int-значения.
-- Добавлены новые API-методы: [webhook/setVersion](https://github.com/getCompass/userbot#post-webhooksetversion) и [webhook/getVersion](https://github.com/getCompass/userbotblob/master/README_ru.md#post-webhookgetversion).
+- Добавлены новые API-методы: [webhook/setVersion](https://github.com/getCompass/userbot#post-webhooksetversion) и [webhook/getVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhookgetversion).
 
 Инструкция для миграции:
 1) Поправьте все запросы к Userbot API, указав в URL запроса новую версию API.<br>
@@ -57,7 +57,7 @@
 - заголовок **"Authorization: bearer=<токен бота>"** содержит токен вашего бота;
 - заголовок **"Signature: signature=<подпись запроса>"** - подпись для валидации данных запроса.
 
-3) В методах [user/send](https://github.com/getCompass/userbotblob/master/README_ru.md#post-usersend), [user/getList](https://github.com/getCompass/userbotblob/master/README_ru.md#post-usergetlist) параметр `user_id` имеет формат int-значения.<br>
+3) В методах [user/send](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-usersend), [user/getList](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-usergetlist) параметр `user_id` имеет формат int-значения.<br>
 Префикс "User-" был удалён.<br>
 >Пример:
 >```json5 
@@ -81,8 +81,8 @@
 >```
 
 5) Для возможности смены версии webhook вашего бота используйте новые методы Userbot API:
-- [webhook/setVersion](https://github.com/getCompass/userbotblob/master/README_ru.md#post-webhooksetversion)
-- [webhook/getVersion](https://github.com/getCompass/userbotblob/master/README_ru.md#post-webhookgetversion)
+- [webhook/setVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhooksetversion)
+- [webhook/getVersion](https://github.com/getCompass/userbot/blob/master/README_ru.md#post-webhookgetversion)
 
 ---
 
