@@ -1039,7 +1039,7 @@ With the example above, let's take that Fred Lambert has a member ID 345. To get
 
 ---
 
-The bot has the same message formatting abilities as a team member in Compass.<br>
+The bot can apply formatting to messages like a normal team member in Compass.<br>
 
 For example, you can change the typeface or highlight words in a certain color:
 - bold text font: *bold font*
