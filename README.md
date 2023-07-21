@@ -705,7 +705,7 @@ The following parameters can be used in the request body:
 | offset | int | _optional_ | Offset for data pagination. Default = 0. |
 
 The result of the method is:<br>
-user_list (array) — list with the data about workspace members.
+user_list (array) is a list with the data about team members.
 
 <details><summary>Data example for the request body and the executing result</summary>
 <br>
