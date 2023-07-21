@@ -163,7 +163,7 @@ In case of success, the response field may have the data of the executed request
 
 Let's look at the scheme of getting the result by the example of sending a message from a bot:
 - performing the [/user/send](#post-usersend) request by sending the text: Hello, this is bot 😊
-- If the message is successfully sent, the method will return the result of executing the request. It is the message_id of the message sent by the bot in the following example::
+- If the message is successfully sent, the method will return the result of executing the request. It is the message_id of the message sent by the bot in the following example:
 >```json5
 >{
 >     "status": "ok",
