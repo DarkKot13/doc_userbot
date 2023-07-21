@@ -129,7 +129,7 @@ When sending a request, you need to specify where the message from the bot will 
 
 The member ID (the "user_id" parameter in requests) is used when sending a message to a specific member. You may get it from a member's profile in Compass (ID is available for users with bot managing permission only):
 
-| <img src="./screenshots/en/en8.png" alt="" width="550" />  |
+| <img src="./screenshots/en/en8.png" />  |
 |------------------------------------------|
 
 #### Chat Key
