@@ -34,7 +34,6 @@ the header **"Authorization: bearer=< bot token >"** contains your bot's token.
 
 2) In your project, where the request that came to your webhook is processed, remove the Signature header processing.
 
----
 
 ## [V2](https://github.com/getCompass/userbot/releases/tag/v2)
 
@@ -84,7 +83,6 @@ The prefix "User-" has been removed.<br>
     - [webhook/setVersion](https://github.com/getCompass/userbot#post-webhooksetversion)
     - [webhook/getVersion](https://github.com/getCompass/userbot#post-webhookgetversion)
 
----
 
 ## [Userbot release](https://github.com/getCompass/userbot/releases/tag/v1)
 
