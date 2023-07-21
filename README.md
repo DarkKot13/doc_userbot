@@ -899,7 +899,7 @@ The result will be a standard "ok" response with no data inside.
 
 Data for the request body:
 ```json5 
-{"version": 2}
+{"version": 3}
 ```
 
 Request execution result:
