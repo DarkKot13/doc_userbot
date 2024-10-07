@@ -78,7 +78,10 @@ Thus, all bot requests that used the compromised token will become invalid for t
 ## Sending a request to Compass ##
 
 Requests to Compass Userbot API must be performed via HTTPS-request using POST method sent to endpoint: <br>
-`https://userbot .getcompass.com/api/v3/` + (implemented method)<br>
+`https://userbot.getcompass.com/api/v3/` + (implemented method)<br>
+
+Endpoint for On-premise product version: <br>
+`https://<yourdomain>/userbot/api/v3/` + (implemented method)<br>
 
 All requests must be set with content type **application/json**.<br>
 To upload files **multipart/form-data**.
@@ -448,7 +451,8 @@ Learn more about migration changes and webhook version: [Migration guide](https:
 ### `POST /user/send`
 
 A method for sending bot's message to a user.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/user/send`
+URL for the request: `https://userbot.getcompass.com/api/v3/user/send` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/user/send`
 
 The following parameters must be specified in the request body:
 
@@ -499,7 +503,8 @@ List of possible errors:
 ### `POST /group/send`
 
 The method for sending a message from the bot to a group chat.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/group/send`
+URL for the request: `https://userbot.getcompass.com/api/v3/group/send` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/group/send`
 
 The following parameters must be specified in the request body:
 
@@ -550,7 +555,8 @@ List of possible errors:
 ### `POST /thread/send`
 
 The method for sending message from the bot to a comment thread.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/thread/send`
+URL for the request: `https://userbot.getcompass.com/api/v3/thread/send` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/thread/send`
 
 The following parameters must be specified in the request body:
 
@@ -601,7 +607,8 @@ List of possible errors:
 ### `POST /message/addReaction`
 
 The method for adding bot's reactions to the message.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/message/addReaction`
+URL for the request: `https://userbot.getcompass.com/api/v3/message/addReaction` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/message/addReaction`
 
 The Compass app supports a list of reactions of version 15.0: https://emojipedia.org/emoji-15.0/. <br>
 
@@ -649,7 +656,8 @@ List of possible errors:
 ### `POST /message/removeReaction`
 
 The method for removing bot's reactions from messages.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/message/removeReaction`
+URL for the request: `https://userbot.getcompass.com/api/v3/message/removeReaction` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/message/removeReaction`
 
 The Compass app supports a list of reactions of version 15.0: https://emojipedia.org/emoji-15.0/. <br>
 
@@ -697,7 +705,8 @@ List of possible errors:
 ### `POST /user/getList`
 
 The method for getting data about the team members of.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/user/getList`
+URL for the request: `https://userbot.getcompass.com/api/v3/user/getList` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/user/getList`
 
 The following parameters can be used in the request body:
 
@@ -745,7 +754,8 @@ Request execution result:
 ### `POST /group/getList`
 
 The method for getting data about the groups the bot is member of.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/group/getList`
+URL for the request: `https://userbot.getcompass.com/api/v3/group/getList` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/group/getList`
 
 The following parameters can be used in the request body:
 
@@ -798,7 +808,8 @@ Request execution result:
 ### `POST /command/update`
 
 The method for updating bot command list.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/command/update`
+URL for the request: `https://userbot.getcompass.com/api/v3/command/update` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/command/update`
 
 The following parameters must be specified in the request body:
 
@@ -809,7 +820,7 @@ The following parameters must be specified in the request body:
 A few rules for setting commands:
 
 - The length of the command must not exceed 80 characters.
-- The command can have parameters enclosed in square brackets. In this case, the pattern for defining commands for the bot will "ignore" them during processing, treating them as a sent parameter. <br> For example, a bot command list includes the command: "send the message to the member [ID]". If the message "/send message to member [1666]" is sent to the chat, the parser will define it as a command. 
+- The command can have parameters enclosed in square brackets. In this case, the pattern for defining commands for the bot will "ignore" them during processing, treating them as a sent parameter. <br> For example, a bot command list includes the command: "send the message to the member [ID]". If the message "/send message to member [1666]" is sent to the chat, the parser will define it as a command.
 - Commands can contain Cyrillic and Latin alphabet symbols, numbers and an underscore. For example,
 
 > /help
@@ -856,7 +867,8 @@ List of possible errors:
 ### `POST /command/getList`
 
 The method for getting bot command list.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/command/getList`
+URL for the request: `https://userbot.getcompass.com/api/v3/command/getList` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/command/getList`
 
 Parameters are **not required** to be sent in the request body.
 
@@ -884,7 +896,8 @@ command_list (array) — bot command list.
 ### `POST /webhook/setVersion`
 
 The method for setting the level of the bot webhook version.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/webhook/setVersion`
+URL for the request: `https://userbot.getcompass.com/api/v3/webhook/setVersion` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/webhook/setVersion`
 
 The following parameters must be specified in the request body:
 
@@ -924,7 +937,8 @@ List of possible errors:
 ### `POST /webhook/getVersion`
 
 The method for getting the level of the bot webhook version.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/webhook/getVersion`
+URL for the request: `https://userbot.getcompass.com/api/v3/webhook/getVersion` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/webhook/getVersion`
 
 Parameters are **not required** to be sent in the request body.
 
@@ -951,7 +965,8 @@ version (int) — bot webhook version level.
 The method for getting the URL node where the files are uploaded.
 
 It is used for further getting of file_id parameter for sending files.<br>
-URL for the request: `https://userbot.getcompass.com/api/v3/file/getUrl`
+URL for the request: `https://userbot.getcompass.com/api/v3/file/getUrl` <br>
+URL for On-premise product version: `https://<yourdomain>/userbot/api/v3/file/getUrl`
 
 Parameters are **not required** to be sent in the request body.
 
@@ -978,7 +993,8 @@ file_token (string) is a token for validating the file upload.
 After receiving the server URL, it will be possible to upload the file as a composite request using [multipart/form-data](https://ru.wikipedia.org/wiki/Multipart/form-data), signing the request with the received file token.
 
 In our case, with the node_url and file download token taken from the response, the request will look like this:<br>
-URL for the request: `https://file1.getcompass.com/api/userbot/files/upload`
+URL for the request: `https://file1.getcompass.com/api/userbot/files/upload` <br>
+URL for On-premise product version: `https://<yourdomain>/file1/api/userbot/files/upload`
 
 | Name | Type | Property | Description |
 | -------- | --- | --- | -------- |
@@ -1026,24 +1042,30 @@ List of possible errors:
 
 ### Additional message formatting
 
-The function of mentioning a member is available to a bot.
+The function of mentioning a member or members with the same badge is available to a bot.
 
 | <img src="./screenshots/en/en13.png" alt="" width="550" />  |
 |------------------------------------------|
 
 For this purpose, the text of the message must be in the following format:<br>
-`["@"|<numeric identifier user_id>|"<member name>"|]`
+`["@"|<numeric identifier user_id>|"<member name>"]`
 
 With the example above, let's take that Fred Lambert has a member ID 345. To get the message like in the example, the message test sent by the bot must be of the following format:<br>
 `["@"|345|"Fred Lambert"] data generated ✅`
+
+The text of the message containing a badge mention must be in the following format:</br>
+`["@"|0|"all"]` – to mention all people in a chat;</br>
+`["@"|0|"manager"]` – to mention all members having “manager” badge.
+
+For example: `["@"|0|"all"] data generated ✅`
 
 ---
 
 The bot can apply formatting to messages like a normal team member in Compass.<br>
 
 For example, you can change the typeface or highlight words in a certain color:
-- bold text font: *bold font*
-- italics in the text: _italic_
+- bold text font: \*bold font\*
+- italics in the text: \_italic\_
 - strikethrough text: \~strikethrough text\~
 - text on a black background: \`text on a black background\`
 - text highlighted in green: \++green selection\++
