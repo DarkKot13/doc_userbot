@@ -79,9 +79,10 @@ Webhook — это URL-адрес вашего сервиса. После его
 ## Отправка запроса в приложении Compass ##
 
 Запросы к приложению Compass Userbot API должны осуществляться через HTTPS-запрос методом POST, отправленный на endpoint: <br>
+URL для облачной версии продукта: <br>
 `https://userbot.getcompass.com/api/v3/` + (выполняемый метод)<br>
 
-Endpoint для On-premise версии продукта: <br>
+URL для On-premise версии продукта: <br>
 `https://<yourdomain>/userbot/api/v3/` + (выполняемый метод)<br>
 
 Все запросы должны использовать тип содержимого: **application/json**.<br>
@@ -464,7 +465,7 @@ https://userbot.getcompass.com/api/v3/user/send
 ### `POST /user/send`
 
 Метод для отправки сообщения от бота пользователю.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/user/send` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/user/send` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/user/send`
 
 В теле запроса должны быть указаны следующие параметры:
@@ -516,7 +517,7 @@ message_id (string) — ключ сообщения, отправленного 
 ### `POST /group/send`
 
 Метод для отправки сообщения от бота в группу.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/group/send` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/group/send` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/group/send`
 
 В теле запроса должны быть указаны следующие параметры:
@@ -568,7 +569,7 @@ message_id (string) — ключ сообщения, отправленного 
 ### `POST /thread/send`
 
 Метод для отправки сообщения от бота в тред.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/thread/send` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/thread/send` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/thread/send`
 
 В теле запроса должны быть указаны следующие параметры:
@@ -620,7 +621,7 @@ message_id (string) — ключ сообщения, отправленного 
 ### `POST /message/addReaction`
 
 Метод для добавления реакции на сообщение от лица бота.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/message/addReaction` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/message/addReaction` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/message/addReaction`
 
 Приложение Compass поддерживает список реакций версии 15.0: https://emojipedia.org/emoji-15.0/. <br>
@@ -669,7 +670,7 @@ URL для On-premise версии продукта: `https://<yourdomain>/userb
 ### `POST /message/removeReaction`
 
 Метод для удаления реакции бота с сообщения.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/message/removeReaction` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/message/removeReaction` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/message/removeReaction`
 
 Приложение Compass поддерживает список реакций версии 15.0:<br>
@@ -719,7 +720,7 @@ https://emojipedia.org/emoji-15.0/. <br>
 ### `POST /user/getList`
 
 Метод для получения данных об участниках команды.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/user/getList` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/user/getList` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/user/getList`
 
 В теле запроса могут использоваться следующие параметры:
@@ -768,7 +769,7 @@ user_list (array) — список с информацией по участни
 ### `POST /group/getList`
 
 Метод для получения информации о группах, в которых состоит бот.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/group/getList` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/group/getList` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/group/getList`
 
 В теле запроса могут использоваться следующие параметры:
@@ -822,7 +823,7 @@ group_list (array) — список с информацией по группо�
 ### `POST /command/update`
 
 Метод для обновления списка команд бота.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/command/update` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/command/update` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/command/update`
 
 В теле запроса должны быть указаны следующие параметры:
@@ -886,7 +887,7 @@ URL для On-premise версии продукта: `https://<yourdomain>/userb
 ### `POST /command/getList`
 
 Метод для получения списка команд бота.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/command/getList` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/command/getList` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/command/getList`
 
 В теле запроса **не требуются** передавать параметры.
@@ -915,7 +916,7 @@ command_list (array) — список команд бота.
 ### `POST /webhook/setVersion`
 
 Метод для установки уровня версии webhook бота.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/webhook/setVersion` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/webhook/setVersion` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/webhook/setVersion`
 
 В теле запроса должны быть указаны следующие параметры:
@@ -956,7 +957,7 @@ URL для On-premise версии продукта: `https://<yourdomain>/userb
 ### `POST /webhook/getVersion`
 
 Метод для получения уровня версии webhook бота.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/webhook/getVersion` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/webhook/getVersion` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/webhook/getVersion`
 
 В теле запроса **не требуются** передавать параметры.
@@ -983,7 +984,7 @@ version (int) — уровень версии webhook бота.
 
 Метод для получения URL ноды, куда загружаются файлы.
 Предназначен для дальнейшего получения параметра file_id для отправки сообщения-файла.<br>
-URL для запроса: `https://userbot.getcompass.com/api/v3/file/getUrl` <br>
+URL для облачной версии продукта: `https://userbot.getcompass.com/api/v3/file/getUrl` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/userbot/api/v3/file/getUrl`
 
 В теле запроса **не требуются** передавать параметры.
@@ -1011,7 +1012,7 @@ file_token — токен для валидации запроса загруз�
 После получения URL сервера, появится возможность загрузить файл POST-запросом с помощью [multipart/form-data](https://ru.wikipedia.org/wiki/Multipart/form-data), подписав запрос полученным file-токеном.
 
 В нашем случае с полученными из ответа node_url и токеном для загрузки файла запрос будет выглядеть следующим образом:<br>
-URL для запроса: `https://file1.getcompass.com/api/userbot/files/upload` <br>
+URL для облачной версии продукта: `https://file1.getcompass.com/api/userbot/files/upload` <br>
 URL для On-premise версии продукта: `https://<yourdomain>/file1/api/userbot/files/upload`
 
 | Название | Тип | Свойство | Описание |
